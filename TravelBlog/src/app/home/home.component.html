@@ -1,0 +1,12 @@
+<div>
+	<h1 class="m-3">Services we offer</h1>
+	<ul class="nav nav-tabs d-flex justify-content-around">
+		<li class="active" *ngFor="let offer of offers ; index as offerId">
+			<a [routerLink]="['/offers', offerId]">{{ offer.name }}</a>
+		</li>
+	</ul>
+</div>
+<div class="d-flex descr" *ngIf="offer">
+<p class="w-50 p-3">{{offer.description}}</p>
+<img class="w-50" src="{{offer.img}}">
+</div>

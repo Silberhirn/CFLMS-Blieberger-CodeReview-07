@@ -1,0 +1,9 @@
+<h1 class="m-3">Our Blog</h1>
+<div *ngFor="let x of blog">
+<hr>
+<h3 class="m-3">{{x.heading}}</h3>
+<div>
+	<img class="col-3 m-2" src="{{x.img}}">
+	<p class="p-3">{{x.text}}</p>
+</div>
+</div>

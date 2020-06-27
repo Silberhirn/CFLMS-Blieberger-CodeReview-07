@@ -1,0 +1,12 @@
+<h1 class="m-3">Our travel destinations</h1>
+<div class="d-flex box p-3" *ngFor="let destination of destinations">
+	<img class="w-25" src="{{destination.img}}">
+	<div class="p-2">
+		<h3>{{destination.destination}}</h3>
+		<p><b>Description: </b>{{destination.description}}</p>
+		<p><b>Start: </b>{{destination.date}}</p>
+		<p><b>Duration: </b>{{destination.duration}}</p>
+		<p><b>Price: </b>{{destination.price}}</p>
+	</div>
+	<button class="btn btn-primary m-4" (click)="addToCart(destination)">Book Now</button>
+</div>

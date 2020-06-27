@@ -1,0 +1,14 @@
+.box {
+	overflow: hidden;
+	position: relative;
+}
+
+img {
+	object-fit: cover;
+}
+
+button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

@@ -1,0 +1,17 @@
+<h1 class="m-3">Cart</h1>
+
+<div class="row m-1">
+<div class="col-6 text-right p-2">
+<div class="cart-item" *ngFor="let item of items">
+ <p><b>{{ item.destination }}: </b>{{ item.price }}</p>
+</div>
+<hr>
+<h4>Sum: {{sum | currency:"EUR"}}</h4>
+<p *ngIf="sum>4999"><b>Discount: </b>{{bigDiscount | currency:"EUR"}}</p>
+<p *ngIf="sum>1999 && sum<5000"><b>Discount: </b>{{smallDiscount | currency:"EUR"}}</p><hr>
+<h3 *ngIf="sum>1999">Sum after Discount: {{discSum | currency:"EUR"}}</h3>
+</div>
+<div class="col-6 img">
+	<img src="/assets/img/cart.jpeg">
+</div>
+</div>
